@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimeKun - Watch Anime Online</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="park.jpg">
+</head>
+<body>
+  <header>
+    <h1>ANIMEKUN</h1>
+    <nav>
+      <input type="text" id="search" placeholder="Search anime...">
+      <select id="genreFilter">
+        <option value="">All Genres</option>
+        <option value="Action">Action</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Fantasy">Fantasy</option>
+      </select>
+      <button id="watchlistBtn">⭐ Watchlist</button>
+      <button id="historyBtn">🕑 History</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="anime-grid" id="animeGrid"></section>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="animeModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImg" src="">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <p class="genre"><b>Genre:</b> <span id="modalGenre"></span></p>
+      <button id="watchBtn">▶ Watch Now</button>
+      <button id="addWatchlist">➕ Add to Watchlist</button>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0f1f, #1a1a2e);
+  color: #fff;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(30,30,50,0.6);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+
+h1 { color: #ff66cc; }
+
+nav input {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 8px;
+  cursor:text ;
+}
+
+nav select, nav button {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #1e1e2f;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  text-align: center;
+  animation: popUp 0.3s ease;
+}
+
+.modal img { 
+  width: 100%; 
+  border-radius: 8px; 
+  height: 500px;
+  object-fit: cover;
+}
+.close { float: right; cursor: pointer; color: #ff66cc; }
+
+button {
+  margin: 10px;
+  background: #ff66cc;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+button:hover { background: #ff85d4; }
+
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+@keyframes popUp { from {transform: scale(0.9);} to {transform: scale(1);} }

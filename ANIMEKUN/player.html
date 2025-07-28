@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1 id="animeTitle"></h1></header>
+  <main style="text-align:center; padding:20px;">
+    <video id="player" controls autoplay width="80%">
+      <source src="video/sample.mp4" type="video/mp4">
+    </video>
+    <div>
+      <button onclick="prevEp()">⏮ Prev</button>
+      <button onclick="nextEp()">⏭ Next</button>
+    </div>
+  </main>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const title = urlParams.get('anime');
+    document.getElementById('animeTitle').textContent = title;
+
+    let ep = 1;
+    function nextEp() { ep++; updateVideo(); }
+    function prevEp() { if(ep>1){ ep--; updateVideo(); } }
+    function updateVideo() {
+      document.getElementById('player').src = `video/${title}_ep${ep}.mp4`;
+    }
+  </script>
+</body>
+</html>

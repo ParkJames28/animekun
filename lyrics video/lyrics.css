@@ -1,0 +1,40 @@
+
+    body {
+      background: black;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      flex-direction: column;
+    }
+
+    .lyrics-line {
+      font-size: 2em;
+      text-align: center;
+      opacity: 0;
+      animation: fadeInOut 4s forwards;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    #sad-gif {
+      margin-top: 20px;
+      max-width: 300px;
+      height: auto;
+      opacity: 0.9;
+      filter: grayscale(40%);
+      border-radius: 10px;
+    }
+
+    audio {
+      display: none;
+    }
